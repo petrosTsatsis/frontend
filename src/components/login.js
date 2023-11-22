@@ -57,7 +57,7 @@ class Login extends Component {
     if (this.checkBtn.context._errors.length === 0) {
       AuthService.login(this.state.username, this.state.password)
         .then(() => {
-          this.props.router.navigate("/profile");
+          this.props.router.navigate("/home");
           window.location.reload();
         })
         .catch((error) => {
@@ -83,7 +83,7 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="col-md-12">
+      <div className="col-md-12" id="login">
         <div className="card card-container">
 
         <div style={{ color: "rgba(119, 53, 136, 0.459)", display: "flex", justifyContent: "center", alignItems: "center", fontSize: "100px" }}>

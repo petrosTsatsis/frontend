@@ -598,8 +598,17 @@ div.card-title {
   margin-left: 10px; 
 }
 
-canvas#myChart.my-4.w-100 {
+canvas#licenseChart.my-4.w-100 {
   background-color: rgba(129, 72, 144, 0.561);
+  border-radius: 40px;
+  box-sizing: none;
+  display: block;
+  margin: auto;
+  border: 7px solid rgba(39, 18, 44, 0.561); /* Added border with the desired color */
+}
+
+canvas#certificateChart.my-4.w-100 {
+  background-color: rgba(39, 18, 44, 0.561);
   border-radius: 40px;
   box-sizing: none;
   display: block;
@@ -617,10 +626,6 @@ canvas#myChart.my-4.w-100 {
   border-radius: 40px;
 }
 
-.dashboard-container {
-  margin-top: 60px;
-}
-
 /* --------- */
 /* Tooltip */
 /* --------- */
@@ -635,7 +640,6 @@ canvas#myChart.my-4.w-100 {
   left: 50%;
   transform: translateX(-50%);
   background-color: #333;
-  color: #fff;
   padding: 8px;
   border-radius: 4px;
   display: inline-block;
@@ -643,5 +647,19 @@ canvas#myChart.my-4.w-100 {
   z-index: 1;
 }
 
+/* --------- */
+/* Profile */
+/* --------- */
 
+div.card.mb-3 {
+  margin-top: 55px;
+  height: 600px;
+}
 
+#login {
+  margin-top: 130px;
+}
+
+#signup {
+  margin-top: 90px;
+}

@@ -44,6 +44,22 @@ const CustomNavbar = ({ isAuthenticated, logOut, userRole }) => {
     if (isAuthenticated) {
       fetchNotificationCount();
     }
+
+    // Scroll event listener
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        updateNavbar(true);
+      } else {
+        updateNavbar(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [isAuthenticated]);
 
   const handleLogout = () => {
@@ -173,7 +189,8 @@ const CustomNavbar = ({ isAuthenticated, logOut, userRole }) => {
             <Nav.Item className="fork-btn">
               {isAuthenticated ? (
                       <Button
-                      href="/signin"
+                      as={Link}
+                      to="/home"
                       className="fork-btn-inner"
                       onClick={handleLogout}
                       style={{ marginLeft: "20px",backgroundColor: '#623686' ,
@@ -185,7 +202,8 @@ const CustomNavbar = ({ isAuthenticated, logOut, userRole }) => {
               ) : (
                   <Nav.Item className="fork-btn">
                     <Button
-                      href="/signin"
+                      as={Link}
+                      to="/signin"
                       className="fork-btn-inner"
                       style={{ marginLeft: "20px",backgroundColor: '#623686' ,
                       borderColor:' #9c3deb'}}
