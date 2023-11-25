@@ -40,17 +40,26 @@ export default class Home extends Component {
   }
 
   render() {
-    const { counts,isLoggedIn } = this.state;
+    
+    const { counts, isLoggedIn } = this.state;
 
     return (
       <div className="container">
         {isLoggedIn ? (
           <>
-            <CountCards counts={counts}/>
+            <CountCards counts={counts} />
             {AuthService.getCurrentUser() && (
               <Container className="text-container">
                 <Row>
-                  <Col md={12} className="text-center" style={{ fontSize: '1.5rem', fontFamily: "Raleway, serif", color: "#c770f0" }}>
+                  <Col
+                    md={12}
+                    className="text-center"
+                    style={{
+                      fontSize: "1.5rem",
+                      fontFamily: "Raleway, serif",
+                      color: "#c770f0",
+                    }}
+                  >
                     <UsersType />
                   </Col>
                 </Row>
@@ -72,7 +81,7 @@ export default class Home extends Component {
                 </Col>
                 <Col md={5} style={{ paddingBottom: 20 }}>
                   <img
-                    src={process.env.PUBLIC_URL + "/Home.png"}
+                    src={process.env.PUBLIC_URL + "/testing.webp"}
                     alt="home pic"
                     className="img-fluid"
                     style={{ maxHeight: "450px" }}

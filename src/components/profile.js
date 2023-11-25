@@ -190,17 +190,8 @@ export default class Profile extends Component {
                         </div>
                         <div className="col-7 mb-3">
                           <h5>Roles</h5>
-                          {editing ? (
-                            <input
-                              type="text"
-                              className="form-control"
-                              name="username"
-                              value={tempUser.username}
-                              onChange={this.handleInputChange}
-                            />
-                          ) : (
                             <p className="text-muted">{currentUser.roles && currentUser.roles.join(", ")}</p>
-                          )}
+
                         </div>
                       </div>
                     </div>

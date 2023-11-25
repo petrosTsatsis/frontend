@@ -247,14 +247,14 @@ class Dashboard extends Component {
   render() {
     return (
       <div className="dashboard-containers">
-        <div className="dashboard-box" style={{ marginTop: '50px' }}>
-          <h3 style={{ marginLeft: '450px', color: 'white' }}>Software Licenses Dashboard</h3>
+        <div className="dashboard-box" style={{ marginTop: '50px', textAlign: 'center' }}>
+          <h3 style={{color: 'white' }}>Software Licenses Dashboard</h3>
           <Tooltip>
             <canvas className="my-4 w-100" id="licenseChart" style={{ maxWidth: '1200px', maxHeight: '500px', width: '100%', height: '500px' }}></canvas>
           </Tooltip>
         </div>
-        <div className="dashboard-box" style={{ marginTop: '100px' }}>
-          <h3 style={{ marginLeft: '430px', color: 'white' }}>SSL Certificates Dashboard</h3>
+        <div className="dashboard-box" style={{ marginTop: '100px', textAlign: 'center' }}>
+          <h3 style={{ color: 'white' }}>SSL Certificates Dashboard</h3>
           <Tooltip>
             <canvas className="my-4 w-100" id="certificateChart" style={{ maxWidth: '1200px', maxHeight: '500px', width: '100%', height: '500px' }}></canvas>
           </Tooltip>

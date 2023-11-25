@@ -11,8 +11,6 @@ import {
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/home";
-import NavBar from "./components/CustomNavbar";
-import Sidebar from './components/sidebar';
 import AuthService from "./services/authService";
 import Login from "./components/login";
 import Register from "./components/register";
@@ -21,6 +19,7 @@ import ContactUs from "./components/contactUs";
 import Footer from "./components/Footer";
 import CustomNavbar from "./components/CustomNavbar";
 import Dashboard from "./components/dashboard";
+import AboutUs from "./components/aboutUs";
 
 
 class App extends Component {
@@ -65,12 +64,13 @@ class App extends Component {
       <Particle /> 
       <Routes>
         <Route path="/" element={<Home />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/signin" element={<Login />} />
-                <Route path="/signup" element={<Register />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/contact-us" element={<ContactUs/>}/>
-                <Route path="/Dashboard" element={<Dashboard/>}/>
+        <Route path="/home" element={<Home />} />
+        <Route path="/signin" element={<Login />} />
+        <Route path="/signup" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/contact-us" element={<ContactUs/>}/>
+        <Route path="/about" element={<AboutUs/>}/>
+        <Route path="/Dashboard" element={<Dashboard/>}/>
       </Routes>
       <Footer />
     </Router>
