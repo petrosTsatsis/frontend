@@ -45,7 +45,6 @@ const CustomNavbar = ({ isAuthenticated, logOut, userRole }) => {
       fetchNotificationCount();
     }
 
-    // Scroll event listener
     const handleScroll = () => {
       if (window.scrollY > 0) {
         updateNavbar(true);
@@ -55,8 +54,7 @@ const CustomNavbar = ({ isAuthenticated, logOut, userRole }) => {
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    // Cleanup the event listener when the component is unmounted
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -114,7 +112,7 @@ const CustomNavbar = ({ isAuthenticated, logOut, userRole }) => {
         <span style={{ marginLeft: "5px" }}>Services</span>
       </>
     } id="basic-nav-dropdown" style={{ marginLeft: "0px"}}>
-      <NavDropdown.Item as={Link} to="/Softwares">Software</NavDropdown.Item>
+      <NavDropdown.Item as={Link} to="/Software">Software</NavDropdown.Item>
       <NavDropdown.Item as={Link} to="/Customers">Customers</NavDropdown.Item>
       <NavDropdown.Item as={Link} to="/Purchases">Purchases</NavDropdown.Item>
       <NavDropdown.Item as={Link} to="/SSLCertificates">SSL Certificates</NavDropdown.Item>
@@ -177,7 +175,7 @@ const CustomNavbar = ({ isAuthenticated, logOut, userRole }) => {
               <a className="nav-link" onClick={handleNotificationsClick}>
                 <div style={{ position: 'relative', display: 'inline-block' }}>
                   <MdNotifications style={{ marginBottom: "2px", fontSize: '28px' }} />
-                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill " style={{ fontSize: '14px',  backgroundColor: '#c770f0'}}> {/* Adjust the fontSize */}
+                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill " style={{ fontSize: '14px',  backgroundColor: '#c770f0'}}>
                     {notificationCount}
                     <span className="visually-hidden">unread messages</span>
                   </span>

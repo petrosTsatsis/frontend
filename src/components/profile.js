@@ -91,7 +91,7 @@ export default class Profile extends Component {
         <div className="container py-5 h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col col-lg-6 mb-4 mb-lg-0">
-              <div className="card mb-3" style={{ borderRadius: ".5rem", position: 'relative'}}>
+              <div className="card mb-3" style={{ borderRadius: ".5rem", position: 'relative', boxShadow: "0px 1px 5px 5px rgba(119, 53, 136, 0.459)", background:" rgba(73, 24, 85, 0.200)"}}>
                 <div className="row g-0">
                   <div
                     className="col-md-4 gradient-custom text-center text-white"
@@ -126,6 +126,7 @@ export default class Profile extends Component {
                       borderColor:' #9c3deb', width: '100px', marginTop:'20px'}}>
                         Edit
                       </Button>
+                      
                     )}
                     {editing && (
                       <div>                     

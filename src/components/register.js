@@ -162,7 +162,7 @@ export default class Register extends Component {
   render() {
     return (
       <div className="col-md-12" id="signup">
-        <div className="card card-container" style={{marginTop: '40px'}}>
+        <div className="card card-container" style={{marginTop: '40px', boxShadow: "0px 1px 5px 5px rgba(119, 53, 136, 0.459)", background:" rgba(73, 24, 85, 0.200)"}}>
           <h2 style={{ textAlign: 'center',fontFamily: "Raleway, serif", color: "white" }}>New user</h2>
           <Form
             onSubmit={this.handleRegister}

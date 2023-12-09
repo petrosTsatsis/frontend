@@ -20,7 +20,7 @@ import Footer from "./components/Footer";
 import CustomNavbar from "./components/CustomNavbar";
 import Dashboard from "./components/dashboard";
 import AboutUs from "./components/aboutUs";
-
+import ListSoftwareComponent from "./components/ListSoftwareComponent";
 
 class App extends Component {
   constructor(props) {
@@ -61,7 +61,7 @@ class App extends Component {
 
     <Router>
       <CustomNavbar isAuthenticated={isAuthenticated} logOut={this.logOut} userRole={showAdminBoard ? 'Admin' : 'Manager'} />
-      <Particle /> 
+       
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -71,8 +71,10 @@ class App extends Component {
         <Route path="/contact-us" element={<ContactUs/>}/>
         <Route path="/about" element={<AboutUs/>}/>
         <Route path="/Dashboard" element={<Dashboard/>}/>
+        <Route path="/Software" element={<ListSoftwareComponent/>}/>
       </Routes>
       <Footer />
+      <Particle/>
     </Router>
   );
   }

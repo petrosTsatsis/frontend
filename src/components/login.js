@@ -84,9 +84,9 @@ class Login extends Component {
   render() {
     return (
       <div className="col-md-12" id="login">
-        <div className="card card-container">
+        <div className="card card-container" style={{boxShadow: "0px 1px 5px 5px rgba(119, 53, 136, 0.459)", background:" rgba(73, 24, 85, 0.200)"}}>
 
-        <div style={{ color: "rgba(119, 53, 136, 0.459)", display: "flex", justifyContent: "center", alignItems: "center", fontSize: "100px" }}>
+        <div style={{ color: "rgba(119, 53, 136, 0.459)", display: "flex", justifyContent: "center", alignItems: "center", fontSize: "100px", paddingBottom: 10 }}>
           <BsPerson />
         </div>
           <Form
@@ -95,28 +95,30 @@ class Login extends Component {
               this.form = c;
             }}
           >
-            <div className="form-group">
-              <label htmlFor="username">Username</label>
-              <Input
+            
+            <div class="form-floating mb-3">
+              <input 
                 type="text"
-                className="form-control"
-                name="username"
+                class="form-control" 
+                id="floatingInput" 
+                placeholder="Username" 
                 value={this.state.username}
                 onChange={this.onChangeUsername}
-                validations={[required]}
-              />
+                validations={[required]}/>
+              <label for="floatingInput" style={{textAlign: 'center', marginTop: '0px'}}>Username</label>
             </div>
 
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <Input
+            <div className="form-floating">
+              <input
                 type="password"
-                className="form-control"
-                name="password"
+                class="form-control" 
+                id="floatingPassword" 
+                placeholder="Password"
                 value={this.state.password}
                 onChange={this.onChangePassword}
                 validations={[required]}
               />
+              <label for="floatingPassword" style={{textAlign: 'center', marginTop: '0px'}}>Password</label>
             </div>
 
             <div className="form-group">

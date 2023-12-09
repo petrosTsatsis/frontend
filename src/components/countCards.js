@@ -32,9 +32,9 @@ function CountCards({ counts }) {
           <div className="card-body">
             <div className="card-title">{cardData[key]}</div>
 
-            <Link to={`/${key.toLowerCase()}`}>
+            <Link to={`/${key}`}>
               <div className="mt-auto">
-                <Button className="card-button" variant="primary" style={{ color: '#fff', backgroundColor: '#6d20c5d7', borderColor: '#6d20c5d7'}}>
+                <Button className="card-button" variant="primary" style={{ color: '#ffc107', backgroundColor: '#6d20c5d7', borderColor: '#6d20c5d7'}}>
                   {icon[key]} {key}
                 </Button>
               </div>
